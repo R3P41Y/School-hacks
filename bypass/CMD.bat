@@ -1,5 +1,5 @@
-:: CMD Bypass By NRFC
-:: Github: github.com/Danny0408
+:: CMD Bypass
+:: Github: https://github.com/R3P41Y/School-hacks
 color 3
 
 @echo off
