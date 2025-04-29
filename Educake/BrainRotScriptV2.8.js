@@ -116,7 +116,7 @@ function importFromURL(url, finished) {
 
 async function fetchAnswers() {
 	let response = await fetch(
-		"https://raw.githubusercontent.com/R3P41Y/School-Hacks/refs/heads/main/Educake/answers.json",
+		"https://raw.githubusercontent.com/R3P41Y/School-hacks/main/Educake/answers.json",
 	);
 	response = await response.json();
 	answers = response.hashed;
