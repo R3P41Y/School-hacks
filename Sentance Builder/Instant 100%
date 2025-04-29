@@ -1,0 +1,26 @@
+javascript:(() => {
+    const clickAllYellowButtons = () => {
+        // Find all yellow buttons using their class
+        const buttons = document.querySelectorAll('button.btn.btn-warning');
+
+        // Loop through all found buttons and click them
+        buttons.forEach(button => {
+            button.click();
+            console.log('Clicked a yellow button with answer:', button.innerText);
+        });
+    };
+
+    // Click all buttons immediately
+    clickAllYellowButtons();
+
+    // Click all buttons every 1 millisecond (extremely fast clicking)
+    const intervalId = setInterval(() => {
+        clickAllYellowButtons();
+    }, 1); // Set to 1 millisecond for fast clicks
+
+    // Stop clicking after 20 seconds (adjust as needed)
+    setTimeout(() => {
+        clearInterval(intervalId);
+        console.log('Stopped clicking after 20 seconds.');
+    }, 20000); // You can change this time duration
+})();
