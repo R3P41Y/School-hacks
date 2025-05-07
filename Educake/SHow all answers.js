@@ -1,6 +1,5 @@
 (async function() {
     function createPasswordPrompt() {
-        // Create the modal
         const modal = document.createElement("div");
         modal.id = "passwordModal";
         modal.style.position = "fixed";
@@ -51,22 +50,22 @@
         
         document.body.appendChild(modal);
         
-        // Password verification
+       
         submitButton.onclick = function() {
             const enteredPassword = passwordInput.value;
             const correctPassword = "r00t";
             
             if (enteredPassword === correctPassword) {
-                modal.style.display = "none";  // Close modal if password is correct
-                startApp(); // Proceed with the rest of the app
+                modal.style.display = "none";  
+                startApp();
             } else {
                 alert("Incorrect password! The tab will now close.");
-                window.close(); // Close the tab if password is incorrect
+                window.close();
             }
         };
     }
 
-    // Function to start the rest of the app after password is correct
+   
     async function startApp() {
         let authToken = sessionStorage.getItem("token");
 
@@ -154,7 +153,6 @@
 
     createPasswordPrompt();
 
-    // === UTILS BELOW === //
 
     function createLoadingScreen() {
         const style = document.createElement("style");
@@ -195,8 +193,8 @@
         overlay.innerHTML = `<div id="loadingText">Loading Answers...</div>`;
         document.body.appendChild(overlay);
 
-        // Remove loading screen after 5 seconds
-        setTimeout(removeLoadingScreen, 5000); // 5000ms = 5 seconds
+       
+        setTimeout(removeLoadingScreen, 5000); 
     }
 
     function removeLoadingScreen() {
